@@ -13,8 +13,8 @@ type colorerServer struct {
 // GetEcho returns the feature at the given point.
 func (s *colorerServer) GetColor(ctx context.Context, msg *GetColorRequest) (*GetColorResponse, error) {
 	log.Printf("Server colorer called with message (%v)", msg)
-	time.Sleep(time.Duration(50) * time.Millisecond)
-	return &GetColorResponse{Cold: 0, Hot: 100}, nil
+	time.Sleep(time.Duration(500) * time.Millisecond)
+	return &GetColorResponse{Cold: 10, Hot: 90}, nil
 }
 
 func NewServer() ColorerServer {
